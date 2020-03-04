@@ -1,0 +1,66 @@
+body {
+  margin: 0px;
+  padding: 0% 1%;
+  font-family: sans-serif;
+}
+
+ .liste_head li {
+   display: inline-flex;
+   padding: 0px 21px;
+ }
+
+.header {
+  display: flex;
+  position: relative;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.liste_head {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding-top: 25px;
+  margin-right: 160px;
+}
+
+.show_more {
+  background-color: #709dca;
+  font-weight: bold;
+  padding: 15px 20px;
+  position: absolute;
+  display: flex;
+  left: 45%;
+  bottom: 110px;
+}
+.about_us {
+  position: relative;
+}
+
+.READ_MORE {
+  background-color: #e7ad48;
+  color: white;
+  position: absolute;
+  padding: 15px 23px;
+  border: solid 1px black;
+  bottom: 95px;
+  left: 910px;
+}
+
+li {
+  display: inline-flex;
+  width: auto;
+  padding: 3px 32px;
+}
+
+.portfolio {
+  color: #709dca;
+  display: flex;
+  position: relative;
+}
+
+.liste_port {
+  position: absolute;
+  top: 180px;
+  left: 450px;
+}

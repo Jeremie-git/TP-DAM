@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="formulaireACME.css" media="screen"/>
+    <title>Contacts</title>
+  </head>
+
+  <body>
+  <section>
+    <div class="entete">
+      <div class="img">
+        <img src="acme.jpg" alt="logo" height="112">
+      </div>
+      <div class="titreh1">
+        <h1>Entreprise ACME <br><br>Formulaire de commande de matériel</h1>
+      </div>
+
+    </div>
+
+    <form class="formulaire" action="retour.php" method="get">
+      <fieldset id="coordonnees">
+          <legend>Vos coordonnées</legend>
+        <div class="cadre">
+        <div class="labels">
+          <label for="nom" class="label">Nom</label>
+          <label for="prenom" class="label">Prénom</label>
+          <label for="mail" class="label">email</label>
+        </div>
+        <div class="inputs">
+          <input type="text" name="L1" id="nom" placeholder="Votre nom" required /><br/>
+          <input type="text" name="L2" id="prenom" placeholder="Votre prénom" required /><br/>
+          <input type="email" name="L3" id="mail" placeholder="Votre e-mail" required /><br/>
+        </div>
+        </div>
+      </fieldset>
+
+      <fieldset id="pubs">
+          <legend>Voules-vous recevoir nos publicités ?</legend>
+
+
+
+        <div class="vousetes">
+          <div class="box">
+          <input type="radio" name="OPT" value="oui" id="etudiant" />
+          <label for="etudiant">oui</label>
+          </div>
+          <div class="box">
+          <input type="radio" name="OPT" value="non" id="enseignant" />
+          <label for="enseignant">non</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset id="commande">
+          <legend>Cochez les articles que vous commandez (plusieurs choix possibles) :</legend>
+          <div class="multichoix">
+            <input type="checkbox" name="C1" value="Enclume" id="case1" />
+            <label for="case1">Enclume</label><br />
+            <input type="checkbox" name="C2" value="Patins à roulettes à fusées" id="case2" />
+            <label for="case2">Patins à roulettes fusées</label><br />
+            <input type="checkbox" name="C3" value="Tremplin géant" id="case3" />
+            <label for="case3">Tremplin géant</label><br />
+            <input type="checkbox" name="C4" value="Rails de train" id="case4" />
+            <label for="case4">Rails de train</label><br />
+          </div>
+
+      </fieldset>
+      <fieldset id="promo">
+          <legend>Offre promotionnelle, choisissez un cadeau :</legend>
+          <select name="coyotte">
+              <option value="Coyotte en peluche">Coyotte en peluche</option>
+              <option value="Coyotte en sucre">Coyotte en sucre</option>
+              <option value="Coyotte en plastique">Coyotte en plastique</option>
+          </select>
+
+      </fieldset>
+
+      <fieldset id="message">
+        <legend>Vos commentaires :</legend>
+        <textarea name="Mltt" placeholder="Ajouter votre message" rows="7"></textarea>
+      </fieldset>
+
+
+      <div class="boutons">
+        <input type="submit" value="Commander">
+      </div>
+
+    </form>
+
+  </section>
+  </body>
+</html>

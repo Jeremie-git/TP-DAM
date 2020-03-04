@@ -1,0 +1,29 @@
+table, caption {
+  border-collapse: collapse;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+table, tr, td, th {
+  border: 5px solid black;
+  color: lightgrey;
+}
+
+th {
+  background-color: red;
+}
+
+td {
+  background-color: darkgreen;
+  text-align: center;
+  width: 18%;
+}
+
+caption {
+  font-variant: small-caps;
+  background-color: blue;
+  color: white;
+  border : 5px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 50px;
+  font-size: 25px;
+}

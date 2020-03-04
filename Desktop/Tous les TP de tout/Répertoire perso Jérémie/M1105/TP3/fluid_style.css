@@ -1,0 +1,55 @@
+body {
+  background-color: #343752;
+  color: white;
+  font-family: "Calibiri", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+section{
+  display: flex;
+  flex-wrap: wrap;
+}
+#case5{
+  display: flex;
+  padding: 0px;
+  width: 320px;
+}
+#case1 {
+  background-color: #37B6B7;
+}
+#case2 {
+  background-color: #683FB7;
+}
+#case3 {
+  background-color: #B71C54;
+}
+#case4 {
+  background-color: #4C98E7;
+}
+#carre1 {
+  background-color: #B71C54;
+  margin: 0px 5px 0px 0px;
+}
+#carre2 {
+  background-color:  #DA542D;
+  margin: 0px 0px 0px 5px;
+}
+
+.case {
+  width: 300px;
+  height : 140px;
+  margin: 5px;
+}
+.carre {
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+}
+
+#case1,#case2,#case3,#case4 {
+  padding: 10px;
+}
+
+ .carre {
+  text-align: center;
+}

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<title> M1105 - TP n°6 </title>
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="styleprint.css" media="print" />
+</head>
+
+<body>
+<header>Université de Grenoble Alpes - IUT2 - Département informatique<br />
+M1105 - Web</header>
+
+
+<h1>TP 6 (4H)<br />
+Formulaires HTML5<br />
+Introduction au langage PHP</h1>
+<hr />
+
+<h2>Objectifs du TP</h2>
+<ul>
+<li>Se familiariser avec les formulaires HTML</li>
+<li>Comprendre l'échange client-serveur déclenché par la validation d'un formulaire</li>
+<li>Apprendre les bases du langage PHP</li>
+<li>Comprendre le principe de la programmation Web</li>
+
+</ul>
+
+<p>Ce document est consultable sur la plateforme Chamilo du département.
+</p>
+<hr />
+
+<!--************************************************************************-->
+<!--************************************************************************-->
+<h2>Préparation</h2>
+<ol>
+<li>Créer un répertoire <kbd>TP6</kbd> dans votre répertoire       <kbd>M1105</kbd></li>
+<li>Se positionner dans ce répertoire <kbd>TP6</kbd> </li>
+<li>Recopier dans votre répertoire <kbd>TP6</kbd> le contenu du répertoire <kbd>/users/info/pub/1a/M1105/tp6</kbd></li>
+</ol>
+
+
+<!--************************************************************************-->
+<h2>Déploiement sur un Serveur Web</h2>
+<p> Par commodité, jusqu'à maintenant nous avons travaillé "en local". Ainsi, vous chargiez directement les pages web par un "Open File" dans votre navigateur.
+Il est maintenant temps de nous placer dans le contexte d'un véritable site web dans lequel
+les pages web sont récupérées au moyen de requêtes HTTP adressées à un serveur web. Suivez le guide...</p>
+
+<h3>Installation de l'environnement de travail</h3>
+
+<p>Le logiciel serveur utilisé <strong>Apache</strong> est un logiciel libre
+faisant partie d'un ensemble plus large développé par la fondation Apache<a href="http://www.apache.org/"> (http://www.apache.org/)</a>.
+<br />Nous allons utiliser le serveur Apache qui a été installé sur la machine <kbd>www-etu-info.iut2.upmf-grenoble.fr</kbd>.</p>
+
+<p>Normalement, pour mettre des pages Web sur ce serveur Apache, il suffit de les
+copier dans le répertoire <kbd>/var/www/</kbd> de la machine <kbd>www-etu-info.iut2.upmf-grenoble.fr</kbd>.
+Mais vous n'êtes pas autorisés à
+le faire! (vous n'avez pas les droits d'administrateur). Toutefois, le logiciel Apache permet à tout utilisateur d'avoir un
+répertoire personnel dans lequel il rangera ses propres pages qui seront alors
+accessibles par le serveur Apache. </p>
+
+<p>Par exemple, pour l'utilisateur dont le login est <kbd>toto</kbd>:</p>
+
+<ul>
+<li>ses pages seront rangées dans le répertoire <kbd>~/public_html</kbd> </li>
+<li>ses pages seront accessibles à l'URL : <kbd>http://www-etu-info.iut2.upmf-grenoble.fr/~toto/</kbd></li>
+</ul>
+
+<p><strong>Attention! </strong>Pour avoir accès aux pages contenues dans les répertoires <kbd>public_html</kbd>
+des utilisateurs, le serveur Apache a besoin d'avoir des droits en "lecture pour tous" sur ces pages. Pour donner ces droits facilement, un
+script <strong><kbd>setup-public-html</kbd></strong> a été développé pour vous qu'il faudra ne pas oublier d'exécuter! </p>
+
+<p>Ce script va donner des droits en "lecture pour tous" sur l'ensemble des fichiers de votre répertoire <kbd>~/public_html</kbd> et des sous-répertoires. Si vous voulez voir le code de ce script, il est rangé dans le répertoire <kbd>/users/info/pub/bin/</kbd></p>
+
+<p><strong>Remarque:</strong> Comme les droits de vos répertoires sont
+réinitialisés toutes les nuits, il faudra à chaque séance, exécuter de nouveau ce script. De plus,
+il faut l'exécuter dès lors qu'un nouveau fichier est créé/inséré dans votre répertoire <kbd>~/public_html</kbd> ou l'un de ses sous-répertoire.</p>
+
+<h3>Test de l'installation </h3>
+<ol>
+<li>Se créer un répertoire <kbd>~/public_html</kbd> </li>
+<li>Copier dans ce répertoire une des pages web que vous avez réalisées lors d'une précédente séance de TP (ne pas oublier de recopier également le fichier de style et les images nécessaires).
+<li>Donner les "bons" droits sur ces fichiers (exécuter le script <kbd>setup-public-html</kbd>)</li>
+<li>Visualiser dans le navigateur votre page web. Pour cela :
+	<ul>
+		<li>Lancer le navigateur <kbd>firefox</kbd></li>
+		<li>Accéder à : <kbd>http://www-etu-info.iut2.upmf-grenoble.fr/~votre_login/</kbd></li>
+	</ul>
+</li>
+</ol>
+
+
+
+
+<!--************************************************************************-->
+<h2>Un premier formulaire</h2>
+Les formulaires html permettent la saisie d'information par l'internaute (<kbd>côté client</kbd>) et déclenche un traitement <kbd>côté serveur</kbd>.
+Classiquement, le traitement effectué côté serveur (par un programme PHP) retourne une page web qui est transmise au client pour affichage.
+<h3>Testons</h3>
+<ul>
+<li>Déplacer votre répertoire TP6 dans votre répertoire ~/public_html</li>
+<li>Exécuter le script <kbd>setup-public-html</kbd> afin que le serveur Apache puisse accéder aux répertoires et fichiers de votre répertoire ~/public_html</li>
+<li>Accéder à l'URL <kbd>http://www-etu-info.iut2.upmf-grenoble.fr/~votre_login/</kbd> à partir de votre navigateur et accéder au formulaire <kbd>form1.html</kbd></li>
+<li>Entrer votre nom et votre prénom dans les champs texte et cliquer sur le bouton d'envoi. Vous devez voir s'afficher
+un message de salutation qui vous est personnellement adressé.</li>
+<li>Examiner l'URL apparaissant dans la barre d'adresse de votre navigateur:
+<ol>
+<li>quel est le nom du programme PHP qui a été appelé?</li>
+<li>quels paramètres sont passés à ce programme? (nom des variables et valeurs)</li>
+</ol>
+</li>
+<li>Afficher le code source de la page <kbd>form1.html</kbd> et constater qu'il s'agit bien d'une page html classique, et que cette page contient un formulaire. </li>
+</ul>
+
+<h3>Analysons</h3>
+Ouvrir avec l'éditeur Atom le fichier <kbd>form1.html</kbd> et en analysant le code répondre aux questions suivantes :
+<ul>
+<li>Quelle balise permet d'introduire un formulaire ?</li>
+<li>Quel attribut de cette balise permet de définir le programme à appeler lorsque l'utilisateur clique sur le bouton d'envoi ?</li>
+<li>Quelle balise et quel attribut correspondent aux champs que vous avez complétés ?</li>
+<li>Quelle balise correspond à l'intitulé des champs texte ?</li>
+<li>Quels attributs permettent de faire le lien entre les intitulés et les champs texte ?
+A quoi cela sert-il ?</li>
+<li>Quelle balise et quel attribut correspondent au bouton permettant d'appeler le programme de traitement du formulaire ?</li>
+</ul>
+
+<h3>Approfondissons</h3>
+<p>Nous avons compris comment se structurait un formulaire. Mais d'autres questions restent en suspens.</p>
+
+<ul>
+<li>A quoi sert l'attribut <kbd>method</kbd> de la balise <kbd>&lt;form&gt;</kbd> ?</li>
+<li>Comment est-il possible que la page web retournée contienne les nom et prénom entrés
+dans le formulaire ?</li>
+<li>Repérer les paramètres dans l'URL. Comment sont-il séparés ?</li>
+<li>Quel attribut de la balise <kbd>&lt;input&gt;</kbd> détermine le nom du paramètre passé dans l'URL ?</li>
+
+<li>Modifier l'attribut <kbd>method</kbd> de la balise <kbd>&lt;form&gt;</kbd> en remplaçant la valeur <kbd>get</kbd> par la valeur <kbd>post</kbd>.</li>
+<li>Recharger <kbd>form1.html</kbd> dans votre navigateur, entrer nom et prénom et cliquer sur le bouton d'envoi. Le résultat est-il identique ?</li>
+<li>Noter la nouvelle URL apparaissant dans la barre d'adresse de votre navigateur. En quoi se distingue-telle du précédent test ?</li>
+
+<li>Re-modifier l'attribut <kbd>method</kbd> de la balise <kbd>&lt;form&gt;</kbd> pour revenir à la valeur <kbd>get</kbd>.</li>
+
+<li>Les normes définies par le W3C n'autorisent l'utilisation que de certains caractères pour former des URLs <a href="http://www.w3schools.com/tags/ref_urlencode.asp" target="_blank">(http://www.w3schools.com/tags/ref_urlencode.asp)</a>.
+Saisir des noms et prénoms avec accents et blancs et observer l'encodage de ces caractères dans l'URL.
+<li>Comprenez-vous maintenant comment la page web retournée peut afficher les valeurs que vous avez saisies sur la page précédente ?
+<p>
+En fait, que la methode soit GET ou POST, les paramètres sont bien passés au serveur Web!
+GET et POST sont deux types de requête HTTP différents. Une requête HTTP est composée d'un en-tête et d'un corps.
+Dans le cas du GET, les paramètres sont passés dans l'en-tête de la requête HTTP
+et sont visibles dans la barre d'adresse URL.  Dans le cas du POST ils sont passés dans le corps de la requête et ne sont pas visibles dans la barre d'adresse.
+La taille de l'URL ayant une limite (dépendant du serveur et du navigateur) le passage des paramètres peut être problématique dans le cas du GET s'ils sont nombreux et/ou long.
+On préconise d'utiliser la méthode POST lorsqu'on ne veut pas que l'internaute visualise les paramètres et/ou lorsque le nombre de paramètres est important.
+</p>
+</li>
+
+</ul>
+
+<!--************************************************************************-->
+<h2>Un formulaire plus complet</h2>
+<h3>Testons</h3>
+<ul>
+<li>Accéder à l'URL <kbd>http://www-etu-info.iut2.upmf-grenoble.fr/~votre_login/</kbd> à partir de votre navigateur et accéder au formulaire <kbd>form2.html</kbd></li>
+<li>Remplir les différents champs texte (monoligne et multiligne)</li>
+<li> Quelles particularités ont :
+<ul>
+<li> l'attribut <kbd>password</kbd> ?</li>
+<li> l'attribut <kbd>email</kbd> ?</li>
+</ul>
+</li>
+<li>Tester les cases à cocher, les boutons radio, la liste déroulante</li>
+<li>Quelle(s) différence(s) de fond (sont-elles interchangeables ?) voyez-vous entre les cases à cocher et les boutons radio ?</li>
+<li>Quelle(s) différence(s) de fond (sont-elles interchangeables ?) voyez-vous entre les boutons radio et les listes déroulantes ?</li>
+<li>Cliquer sur le bouton <kbd>Initialisez</kbd> puis sur le bouton <kbd>Envoyez</kbd>. Quels champs sont obligatoires ?</li>
+<li>Remplir convenablement tous les champs, cliquer sur <kbd>Envoyez</kbd> et visualiser la liste des paramètres transmis
+par la requête HTTP et affichés dans la page retournée</li>
+<li> Ne pas remplir le champ Texte1 et cliquer sur <kbd>Envoyez</kbd>. Que remarquez-vous concernant le paramètre correspondant ? </li>
+<li> Ne cocher aucune "case à cocher" et cliquer sur <kbd>Envoyez</kbd>. Que remarquez-vous ? </li>
+<li> Cocher 3 "cases à cocher" et cliquer sur <kbd>Envoyez</kbd>. Que remarquez-vous ? </li>
+</ul>
+
+<h3>Analysons</h3>
+Ouvrir le fichier <kbd>form2.html</kbd> avec l'éditeur Atom et en analysant le code répondre aux questions suivantes :
+<ul>
+<li>Quel est le nom du script PHP qui sera appelé lorsque l'utilisateur validera son formulaire?</li>
+<li>Quelle balise permet de regrouper visuellement différents éléments d'un formulaire ?</li>
+<li>Quelles balises correspondent respectivement aux :
+<ul>
+<li> Champs texte multiligne </li>
+<li> Case à cocher </li>
+<li> Boutons radio </li>
+<li> Listes déroulantes </li>
+</ul>
+<li>Quel attribut permet de rendre la complétion d'un champ obligatoire ?</li>
+<li>Quel(s) attribut(s) permettent de présélectionner un bouton radio ou un des éléments d'un liste déroulante ?</li>
+<li>Quelle sont les valeurs des attributs <kbd>name</kbd>? A quoi correspondent ces attributs <kbd>name</kbd>? Pourquoi sont-ils essentiels? et qui va les utiliser?  </li>
+<li>Ouvrir le fichier <kbd>form2.css</kbd> avec l'éditeur Atom et en analysant le code répondez aux questions suivantes :
+<ul>
+<li>Quel sélecteur permet de désigner les inputs ayant un certain type ? </li>
+<li>Quelle propriété css permet de changer la forme du curseur ?</li>
+</ul>
+</li>
+
+</ul>
+
+
+
+<!--************************************************************************-->
+<h2>Formulaire de contact pour le site "les bons plans de l'IUT2" </h2>
+<ul>
+<li> Réaliser la page <kbd>contact.html</kbd> correspondant à l'image ci-dessous. Vous utiliserez obligatoirement la méthode <kbd>GET</kbd>.</li>
+<li> Ce formulaire appellera pour l'instant <kbd>script2.php</kbd>.</li>
+
+</ul>
+<img src="contact.png" alt="contact">
+
+
+<!--************************************************************************-->
+<h2>Premier programme PHP (sans serveur Web)</h2>
+<p>PHP a été conçu dès le départ comme un langage de programmation pour le Web. Cependant c'est aussi un langage
+que l'on peut utiliser, comme Ada ou C, en local sur sa machine, sans serveur Web, sans interface HTML.
+Placez-vous dans votre répertoire <kbd>TP6</kbd> et exécutez la commande <kbd>php premier.php </kbd>.
+Cette commande a pour action de lancer l'interprétation de <kbd>premier.php</kbd> par l'interpréteur php.
+Le programme <kbd>premier.php</kbd> vise à vous donner les bases du langage PHP et à vous montrer quelques spécificités de ce langage.
+Mais sachez que pour l'essentiel, PHP reprend la syntaxe du C. </p>
+<p>Une documentation très complète sur PHP peut
+être trouvée dans ce <a href="http://www.php.net/manual/fr/" target="_blank">manuel PHP</a> par exemple.</p>
+<p>En mettant en correspondance la sortie générée par l'interpréteur et le code <kbd>premier.php</kbd>,
+répondre aux questions suivantes (les questions suivent l'ordre d'exécution du programme): </p>
+<ol>
+<li>Remarquer d'abord que <kbd>premier.php</kbd> ne contient pas que du code php. Voyez-vous comment sont introduites les parties de code php
+et comprenez-vous ce que l'interpréteur fait de ce qui n'est pas du php ?</li>
+<li>Comment sont introduits les commentaires ?</li>
+<li>Par quel caractère commence toute variable en php ? </li>
+<li>Où sont déclarées les variables ?</li>
+<li>Une variable peut-elle changer de type en cours d'exécution ? </li>
+<li>Donner le nom de la procédure d'affichage (il existe aussi
+<a href="http://php.net/manual/fr/function.print.php" target="_blank"> print</a> ou encore
+<a href="http://php.net/manual/fr/function.printf.php" target="_blank">printf</a> pour des sorties formatées)</li>
+<li>Identifier l'opérateur de concaténation</li>
+<li>Quelle différence faites-vous entre l'encadrement d'une chaîne par " ou ' ?</li>
+<li>Quel(s) caractère(s) correspond(ent) au saut de ligne ?</li>
+<li>Quel est le rôle du caractère d'échappement "\" ? (devant '$' par exemple) </li>
+<li>Modifier le code pour que l'affichage soit <kbd>valeur de $a : "bonjour"</kbd> (guillemets autour de bonjour).
+Remarquer au passage, qu'il n'y a pas de compilation</li>
+<li>Comment écrit-on un <kbd>Si ... Alors .... Sinon ...</kbd> en PHP ? </li>
+<li>Quel mot-clé permet d'initialiser un tableau ? </li>
+<li>Est-il possible de ranger des valeurs de différents types dans un même tableau ?</li>
+<li>Comment écrit-on une boucle <kbd>Pour ... </kbd> en PHP ?</li>
+<li>Quelle fonction retourne le nombre d'éléments d'un tableau ?</li>
+<li>A quoi correspond la variable située juste après le mot-clé <kbd>as</kbd> dans la première forme du <kbd>foreach</kbd> ?</li>
+<li>A quoi correspond la variable située juste après le mot-clé <kbd>as</kbd> dans la seconde forme du <kbd>foreach</kbd> ?</li>
+<li>A quoi correspond la variable située juste après le mot-clé <kbd>=></kbd> dans la seconde forme du <kbd>foreach</kbd> ?</li>
+<li>Un tableau peut-il être indicé par des valeurs non entières en PHP ? et comment s'appelle un tel tableau?</li>
+<li>Ce programme PHP a-t-il généré du HTML ?</li>
+</ol>
+
+<!--************************************************************************-->
+<h2>Programmation Web en PHP</h2>
+<p>
+	Lorsqu'une requête HTTP est adressée à un serveur Web et que cette requête demande une page html, cette dernière est simplement retournée au client pour affichage.
+	Par contre, lorsque cette requête mentionne un script php, celui-ci est interprété côté serveur (le serveur Web intègre un interpréteur PHP)
+	et la sortie générée par l'interprétation du script est retournée au client pour affichage. C'est exactement le même principe avec des langages comme ASP (Microsoft)
+	ou JSP (Java). Le plus classiquement, le client est un navigateur web ("chrome" par exemple) et le script PHP, côté serveur, génère du HTML.
+</p>
+
+<p>
+	Nous allons maintenant analyser les programmes PHP <kbd>script1.php</kbd> et <kbd>script2.php</kbd> utilisés précédemment.
+	Editer <kbd>script1.php</kbd> et <kbd>script2.php</kbd> et les réexécuter si nécessaire pour répondre aux questions suivantes :
+</p>
+
+<ol>
+<li>Quel type de sortie <kbd>script1.php</kbd> et <kbd>script2.php</kbd> génèrent-ils ?</li>
+<li>Dans <kbd>script1.php</kbd>, il y 2 tableaux: <kbd>$_GET</kbd> et <kbd>$_POST</kbd> ?  A quoi servent-ils? (voir le cours)</li>
+<li>Ces 2 tableaux <kbd>$_GET</kbd> et <kbd>$_POST</kbd> contiendront-ils tous les deux des valeurs?</li>
+<li>Supposons que dans le formulaire de <kbd>form1.html</kbd> la méthode GET est indiquée, quel tableau va récupérer les valeurs saisies par l'utilisateur? et quels seront les indices de ce tableau ?</li>
+<li>Les tableaux <kbd>$_GET</kbd> et <kbd>$_POST</kbd> sont des tableaux associatifs: qu'est-ce que cela signifie?</li>
+</ol>
+
+
+<!--************************************************************************-->
+<h2>Développement du script de traitement du formulaire de contact du site "les bons plans de l'IUT2"</h2>
+<p>En vous inspirant de <kbd>script2.php</kbd> (et <kbd>script1.php</kbd>), développer un script que vous appelerez <kbd>merci.php</kbd>, pour répondre automatiquement à la soumission de votre formulaire de contact:</p>
+<ul>
+<li>Ce script retournera à l'internaute un message le remerciant personnellement (en réutilisant donc son nom et prénom) et l'informant de la bonne réception de son message. </li>
+<li>En fonction des cases cochées, on précisera aussi éventuellement que des informations lui seront envoyées (à l'adresse mail mentionnée dans le formulaire) par le site des bons plans et/ou les partenaires du sites. </li>
+<li>La page retournée affichera aussi un lien permettant un retour à la page d'accueil du site. </li>
+</ul>
+<p><strong>Attention</strong>, vous l'avez vu précédemment,
+les paramètres correspondant aux boîtes à cocher ne sont pas envoyés si les
+boîtes ne sont pas cochées. Aussi, il faut tester si le paramètre existe ; on utilisera pour cela l'appel à la fonction (<kbd>isset()</kbd>)
+(<kbd>if (isset($_GET['nom_du_paramètre']))...</kbd>) (voir la documentation de la <a href="http://php.net/manual/fr/function.isset.php" target="_blank">fonction isset</a>.)</p>
+
+<h2>Pour vous entrainer: Formulaire de l'entreprise ACME (extrait d'un examen)</h2>
+
+<p>Voici le formulaire de commande de matériel de l'entreprise ACME <sup>*</sup>:</p>
+
+<img src="formulaireCoyotte.png" alt="formulaire entreprise ACME" width="700">
+
+<p><strong>Remarque:</strong> pour les cadeaux, les choix possibles sont</p>
+<ul>
+	<li>Coyotte en peluche</li>
+	<li>Coyotte en sucre</li>
+	<li>Coyotte en plastique</li>
+</ul>
+
+<h3>Réalisation du formulaire:</h3>
+<ul>	<li>Réaliser les fichiers <strong>formulaire.html</strong> et <strong>formulaire.css</strong> pour reproduire le formulaire ci-dessus </li>	<li>De préférence, utiliser la méthode <strong>GET</strong>, et observer les paramètres passés dans l'URL</li>	<li>Les champs nom, prénom, email doivent être rendus obligatoires </li>	<li>Un clic sur le bouton "Commander" doit déclencher l'appel de <strong>retour.php</strong> </li></ul>
+
+<h3>Réalisation de la réponse:</h3>
+<ul>
+	<li>Développer <strong>retour.php</strong> selon le modèle ci-dessous </li>
+</ul>
+
+<img class="centre" src="merciCoyotte.jpg" alt="formaulaire entreprise ACME" width="500">
+
+<p><strong><sup>*</sup>Vous ne connaissez pas l'entreprise ACME??? Voici son histoire...</strong></p>
+<p>D'après http://fr.wikipedia.org/wiki/ACME: La compagnie ACME (ACME Corporation) est une société fictive. Elle a été fondée par le personnel de la Warner Bros. Les premiers produits à sortir des usines sont des bouchons de liège et sont vus pour la première fois en 1935 dans le dessin animé Buddy's Bug Hunt. Toutefois, la plupart des produits sont vus dans les dessins animés Bip Bip et Coyote où des produits ACME sont fréquemment achetés par <strong>Wile E. Coyote</strong>, qui commande armes, fusées et autres dispositifs, dans ses tentatives inventives et sans fin pour attraper <strong>Bip Bip</strong>. C'est dans cette série que l'entreprise prendra sa renommée.</p>
+
+<p>L'activité de la compagnie n'est jamais clairement définie, mais elle apparaît comme un conglomérat pouvant manufacturer n'importe quel produit et offrir n'importe quel service imaginable, et ce peu importe leur extravagance ou leur inutilité. L'acronyme de la compagnie signifierait American Company Making Everything (Compagnie Américaine Fabriquant Tout) ou, selon d'autres, A Company that Makes Everything (Une Compagnie qui Fait Tout), ou encore Another Company Making Everything. </p>
+
+
+</body>
+</html>

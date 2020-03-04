@@ -1,0 +1,36 @@
+body {
+	font-family:"Times New Roman", Serif;
+	 font-size:0.8em;
+}
+
+body { counter-reset:titre2 titre3; }  
+
+h2{ counter-increment:titre2; } 
+h3{ counter-increment:titre3; }
+
+h2::before{ content: counter(titre2)" - "; }
+h3::before{ content: counter(titre2)"."counter(titre3)" - "; } 
+
+h1{
+  font-variant: small-caps; 
+  color: blue;text-align:center;
+}
+
+
+h2, h3, h4 { color: blue; }
+
+em { color: green; }
+
+
+pre
+{
+  border: solid thin #000;
+  background-color: #eee;
+  }
+
+kbd{
+  font-family: "arial narrow", sans-serif;
+  color: red;
+  }
+
+.centre{text-align:center;}

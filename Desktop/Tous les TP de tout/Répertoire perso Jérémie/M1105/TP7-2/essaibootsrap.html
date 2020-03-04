@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>My awesome bootstrap page</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet"  href="bootstrap.min.css">
+    <link rel="stylesheet" href="cssboostrapjey.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  </head>
+
+  <body>
+  <nav class="navbar navbar-dark" style="background-color:lightgrey;">
+    <a href="#" class="btn btn-outline-danger">Home</a>
+    <a href="#">Projets</a>
+    <a href="#" class="btn btn-warning">Contacts</a>
+    <a href="#">Aide</a>
+    <img src="chat.png" alt="chat" width="50px">
+  </nav>
+
+    <h1>
+     Here, folks, shall live your code !
+    </h1>
+
+
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+      <h3>ALERTE ALERTE ATTENTION !</h3>
+      <p>Le truc cool c'est qu'on peut fermer l'alerte maintenant !</p>
+      <p>Mais même si vous avez ce pouvoir, laissez moi exister en tant que bouton</p>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+  <div class="card" style="width: 25%">
+    <img src="plaine.png" alt="plaine">
+    <div class="card-body">
+      <h5 class="card-title">La belle plaine</h5>
+      <p class="card-text">Que c'est beau que ça donne envie d'y aller. On s'y allongerai pour ne penser à rien et se resourcer</p>
+      <a href="#" class="btn btn-success">On y va</a>
+    </div>
+  </div>
+
+    <a href="https://www.google.com" class="btn btn-warning btn-lg">Je suis un test de bouton</a>
+
+    <a href="https://www.suisse.com" <button type="button" class="btn btn-danger">Je suis le bouton neutre</button></a>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-outline-success btn-sm" data toggle="modal" data-target="#ExampleModalLong">Aller sur le site Umtice</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="ExampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            En cliquant sur Continuer vous acceptez à vos risques et périls de poursuivre vers le site Umtice.com, reconnu pour être malfaisant et fourbe quoique représenté de main de maitre par M. Aous Karoui. Sur ce site vous pourrez trouver toute sorte d'informations plus troublantes que le Darkweb lui-même. Cela dit vous êtes maintenant informés des dangers encourus. Tout dommage sera nié par M. Jérémie Voyer qui n'est en aucun cas lié aux activités de domaines tiers, peu importe leur provenance.<br>
+            J'espère que ce texte rempli de mensonges sera assez long pour illustrer un contenu assez long pour nécessiter un scrolling et prouver que j'ai réussi l'exercice.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger btn-lg" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success btn-lg" name="button">Aller sur Umtice</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="score">
+      <h1>Meilleur scoreur saison 2018-2019</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Prénom</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Buts</th>
+          <th scope="col">Passes</th>
+          <th scope="col">Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Alexander</td>
+          <td>Ovechkin</td>
+          <td>51</td>
+          <td>45</td>
+          <td>96</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Nicklas</td>
+          <td>Backstrom</td>
+          <td>22</td>
+          <td>68</td>
+          <td>90</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>John</td>
+          <td>Carlson</td>
+          <td>19</td>
+          <td>56</td>
+          <td>75</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="exotableau">
+      <table class="table table-hover">
+        <tr>
+          <th>1</th>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <th>5</th>
+          <td>6</td>
+          <td><button type="button" class="btn btn-warning">Clic me</button></td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <th>9</th>
+          <td><div class="alert alert-success" role="alert">Super!</div></td>
+          <td>11</td>
+          <td>12</td>
+        </tr>
+      </table>
+
+    </div>
+    <div class="container-fluid">
+
+      <div class="row justify-content-around">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="jumbotron">
+              <h1 class="display-5">Salut le monde!</h1>
+              <p class="lead">A simple jumbotron-style component for calling extra attention to featured content or information.</p>
+              <hr class="my-8">
+              <p>It uses uitlity classes for typography and spacing to sapce content out within the larger container.</p>
+              <p class="lead">
+                <a class="btn btn-warning btn-lg" href="#" role="button">Learn more</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="offset-lg-1 col-lg-3 col-md-6">
+            <div class="jumbotron">
+              <h1 class="display-5">Salut le monde!</h1>
+              <p class="lead">A simple jumbotron-style component for calling extra attention to featured content or information.</p>
+              <hr class="my-8">
+              <p>It uses uitlity classes for typography and spacing to sapce content out within the larger container.</p>
+              <p class="lead">
+                <a class="btn btn-warning btn-lg" href="#" role="button">Learn more</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="offset-lg-1 col-lg-3 col-md-6">
+          <div class="jumbotron">
+            <h1 class="display-5">Salut le monde!</h1>
+            <p class="lead">A simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-8">
+            <p>It uses uitlity classes for typography and spacing to sapce content out within the larger container.</p>
+            <p class="lead">
+              <a class="btn btn-warning btn-lg" href="#" role="button">Learn more</a>
+            </p>
+          </div>
+        </div>
+        <div class ="col-lg-6 col-md-10">
+        <div class="jumbotron">
+          <h1 class="display-5">Salut le monde!</h1>
+          <p class="lead">A simple jumbotron-style component for calling extra attention to featured content or information.</p>
+          <hr class="my-8">
+          <p>It uses uitlity classes for typography and spacing to sapce content out within the larger container.</p>
+          <p class="lead">
+            <a class="btn btn-warning btn-lg" href="#" role="button">Learn more</a>
+          </p>
+        </div>
+        </div>
+        <div class="col-lg-6 col-md-10">
+        <div class="jumbotron">
+          <h1 class="display-5">Salut le monde!</h1>
+          <p class="lead">A simple jumbotron-style component for calling extra attention to featured content or information.</p>
+          <hr class="my-8">
+          <p>It uses uitlity classes for typography and spacing to sapce content out within the larger container.</p>
+          <p class="lead">
+            <a class="btn btn-warning btn-lg" href="#" role="button">Learn more</a>
+          </p>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="formulaire">
+      <form>
+        <div class="form-row justify-content-between">
+          <div class="form-group col-md-6">
+            <label class="sr-only" for="inlineFormInputGroup">Nom</label>
+              <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="far fa-address-book"></i></div>
+                  </div>
+            <input type="text" class="form-control" id="Nom" placeholder="Nom">
+          </div>
+          </div>
+          <div class="form-group col-md-6">
+            <label class="sr-only" for="inlineFormInputGroup">Prénom</label>
+              <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="far fa-address-book"></i></div>
+                  </div>
+            <input type="text" class="form-control" id="prenom" placeholder="Prénom">
+          </div>
+        </div>
+        </div>
+        <div class="form-row">
+        <div class="form-group col-6">  <label class="sr-only" for="inlineFormInputGroup">utilisateur</label>
+            <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="far fa-address-book"></i></div>
+                </div>
+          <input type="text" class="form-control" id="utilisateur" placeholder="Nom d'utilisateur">
+        </div>
+        </div>
+        <div class="form-group col-6">  <label class="sr-only" for="inlineFormInputGroup">password</label>
+            <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="fas fa-unlock-alt"></i></div>
+                </div>
+          <input type="password" class="form-control" id="password" placeholder="Password">
+        </div>
+      </div>
+      </div>
+      <div class="form-group">
+        <label class="sr-only" for="inlineFormInputGroup">email</label>
+          <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-envelope-open-text"></i></div>
+              </div>
+              <input type="email" class="form-control" id="username" placeholder="email">
+          </div>
+        </div>
+
+
+        <div class="form-row">
+          <div class="form-group col-12">  <label class="sr-only" for="inlineFormInputGroup">texte</label>
+              <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fas fa-home"></i></div>
+                  </div>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="c'était pas demandé mais je rajoute un placeholder"></textarea>
+          </div>
+        </div>
+      </div>
+
+
+        <div class="form-row justify-content-between">
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>
+</form>
+
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="paraun">
+          Etant donné que je ne peux pas copy/paste un texte internet, je créé moi même des paragraphes pour illustrer l'exercice
+        </div>
+
+        <div class="paradeux">
+          Afin de pouvoir visualiser les effets de cette technique sur différentes tailles d'écrans, plus ou moins grand en fonction de la taille de la fenêtre.
+        </div>
+
+        <div class="paratrois">
+          Je meuble je meuble je meuble Je meuble je meuble je meuble Je meuble je meuble je meuble Je meuble je meuble je meuble
+        </div>
+
+        <div class="paraquatre">
+          Je comble le texte Je comble le texte Je comble le texte Je comble le texte Je comble le texte Je comble le texte Je comble le texte Je comble le texte
+        </div>
+      </div>
+
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap's JavaScript plugins -->
+    <script src="bootstrap.min.js"></script>
+    <script src="popper.min.js"></script>
+  </body>
+</html>

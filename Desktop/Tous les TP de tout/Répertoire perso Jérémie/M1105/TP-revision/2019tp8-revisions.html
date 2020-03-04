@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<title> M1105 - Révisions</title>
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="styleprint.css" media="print" />
+	</head>
+
+<body>
+<header>Université de Grenoble Alpes - IUT2 - Département informatique<br />
+M1105 - Web
+</header>
+       <h1>Révisions (travail personnel)</h1>
+        <hr />
+        <h2>Objectifs </h2>
+        <ul>
+            <li>Se préparer à l'examen final</li>
+        </ul>
+    <p>Ce document est consultable sur la plateforme Chamilo du département.	</p>
+
+  <hr />
+
+	<h2>Préparation</h2>
+	<ol>
+	<li>Créer un répertoire <kbd>Revisions</kbd> dans votre répertoire <kbd>M1105</kbd></li>
+	<li>Se positionner dans ce répertoire <kbd>Revisions</kbd> </li>
+	<li>Recopier dans votre répertoire <kbd>Revisions</kbd> le contenu du répertoire <kbd>/users/info/pub/1a/M1105/Revisions</kbd></li>
+	</ol>
+
+	<h2>Extrait examen n°1 - site Voyage</h2>
+	<p>
+		Le sous-répertoire qui contient l'ensemble des fichiers s'appelle <kbd>voyage</kbd>
+	</p>
+<p>Vous allez réaliser, en plusieurs étapes, la page suivante:</p>
+		<div class="demo">
+				<img src="img-voyage/siteComplet.png" alt="site de voyages"/>
+		</div>
+
+<h3>Etape 1: l'entête et le menu</h3>
+
+<h4>Complétez les fichiers <kbd>entete.html</kbd> et <kbd>entete.css</kbd></h4>
+	<p> Voici ce que vous devez obtenir : </p>
+	<div class="demo">
+		<img src="img-voyage/entete.png" alt="entete du site de voyages"/>
+	</div>
+
+<h4>A respecter:</h4>
+	    <ul>
+			<li>la page est centrée et occupe 90% de la largeur de la fenêtre</li>
+			<li>la page est structurée en 2 divisions principales: "header" (pour le logo et le titre "h1"), "nav" (pour le menu sous forme de liste "ul")
+			<li>la police de caractères est Times et à défaut serif</li>
+			<li>pour le titre "h1" et pour le menu, on utilisera une variante "petites majuscules"</li>
+			<li>chaque item du menu aura une largeur de 100px</li>
+			<li>au survol, les liens du menu ont un fond rouge et la police sera en blanc
+				(comme montré ci-dessus)</li>
+			<li>vous utiliserez le positionnement <strong>flex</strong> pour mettre côte à côte les items du menu</li>
+			<li>et pour le reste, faites en sorte que cela ressemble à ce qui est demandé!</li>
+		</ul>
+
+<h3>Etape 2: le formulaire sans css</h3>
+ <h4>Complétez le fichier <kbd>formulaire.html</kbd></h4>
+		<p> Voici ce que vous devez obtenir : </p>
+		<div class="demo">
+			<img src="img-voyage/formlulairesanscsss.png" alt="formulaire de réservation"/>
+		</div>
+
+	 <h4>A respecter:</h4>
+	 <ul>
+		 <li>le passage de paramètres se fera par "get" et le programme appelé s'appelera "resa.php"</li>
+		 <li>il y a 2 "fieldset"</li>
+			<li>il y a des boutons radio, 3 listes déroulantes, et un champ "date"</li>
+			<li>Remarque: vous choisirez vous-même les options pour les menus déroulants</li>
+			<li>pour le champ date: il sera rendu obligatoire et vous ajouterez un attribut qui donne une indication pour le format de date: "jj/mm/aaaa"</li>
+			<li>Voici le nom des variables que vous devez utiliser:
+				<ul>
+					<li>pour la prestation: "choix"</li>
+					<li>pour la destination: "dest"</li>
+					<li>pour la ville de départ: "vdep"</li>
+					<li>pour la durée: "duree"</li>
+					<li>pour la date de départ: "ddep"</li>
+				</ul>
+			</li>
+			<li>et pour le reste, faites en sorte que cela ressemble à ce qui est demandé!</li>
+		</ul>
+
+	<h3>Etape 3: CSS du formulaire</h3>
+ <h4>Complétez le fichier <kbd>formulaire.css</kbd></h4>
+			<p> Voici ce que vous devez obtenir : </p>
+			<div class="demo2">
+				<img src="img-voyage/formlulaireaveccss.png" alt="formulaire de réservation"/>
+			</div>
+
+			<h4>Indications:</h4>
+ 		 <ul>
+ 				<li>le formulaire fait 320px de large</li>
+				<li>la bordure des "fieldset" est supprimée</li>
+ 				<li>les champs sont alignés</li>
+ 				<li>et pour le reste, faites en sorte que cela ressemble à ce qui est demandé!</li>
+ 			</ul>
+
+<h3>Etape 4: intégration</h3>
+<h4>A partir de ce que vous avez fait précédemment, complétez les fichiers <kbd>final.html</kbd> et <kbd>final.css</kbd></h4>
+		 <p> On rappelle ce que vous devez obtenir : </p>
+		 <div class="demo">
+				<img src="img-voyage/siteComplet.png" alt="site de voyages"/>
+		 </div>
+<hr>
+<h2>Extrait examen n°2 - site Hôtel</h2>
+<p>
+	Le sous-répertoire qui contient l'ensemble des fichiers s'appelle <kbd>hotel</kbd>
+</p>
+<p> On vous demande de réaliser la page d'accueil d'un site (hotel.html) ainsi que sa feuille de style (styleHotel.css). <br>
+		 La voici:
+	</p>
+		<div class="demo">
+			<img src="img-hotel/monHotel-final.png" alt="site mon-hôtel" title="site mon-hôtel" />
+		</div>
+
+	<h4> Voici ce que vous devez respecter : </h4>
+		<ol>
+			<li>Votre design devra être <strong>fluide</strong> pour que votre page s'adapte automatiquement à la taille de la fenêtre (dans la limite du raisonnable!)</li>
+			<li>vous utiliserez le positionnement "flex"</li>
+			<li>le site occupe toute la largeur de la fenêtre</li>
+			<li>la police de caractères est Arial, Helvetica ou à défaut sans-serif</li>
+			<li>les couleurs utilisées sont le rouge, un bleu foncé, un jaune orangé, un gris foncé, ...</li>
+		</ol>
+
+	<h4> Recommandation : </h4>
+	<p> On vous recommande de commencer par mettre en place la partie centrale de la page:
+	</p>
+		<div class="demo">
+			<img src="img-hotel/monHotel-partiel.png" alt="site mon-hôtel" title="site mon-hôtel" />
+		</div>
+<hr>
+<h2>Extrait examen n°3 - site Vol</h3>
+	<p>
+		Le sous-répertoire qui contient l'ensemble des fichiers s'appelle <kbd>vol</kbd>
+	</p>
+<p> On souhaite réaliser la page suivante:
+</p>
+	<div class="demo">
+		<img src="img-vol/siteVol.png"/>
+	</div>
+<p>Nous allons travailler en 2 étapes : </p>
+	<ol>
+		<li>Réalisation du formulaire (formulaire.html et styleFormulaire.css)</li>
+	<li>Réalisation de la page complète (vol.html et styleVol.css)</li>
+</ol>
+
+<h3>Etape 1: Réalisation du formulaire (formulaire.html styleFormulaire.css)</h3>
+<p> Voici ce que vous devez obtenir (voir les indications ci-dessous):
+</p>
+	<div class="demo">
+		<img src="img-vol/formulaire.png"/>
+	</div>
+
+<h4> Afin d'obtenir ce résultat, voici quelques indications : </h4>
+	<ul>
+		<li>Commencer par étudier le code de la page réponse (reponse.php) pour mettre en accord votre formulaire: <br>
+				<div class="demo">
+					<img class="rep" src="img-vol/codePHP.png" alt="code PHP de la réponse" />
+				</div>
+		</li>
+		<li>la police de caractères est Verdana et à défaut sans-serif</li>
+		<li>la couleur de fond est #F0CD68 (jaune moutarde) </li>
+	<li>le formulaire aura 400px de large</li>
+	<li>vous utiliserez des menus déroulants pour les aéroports de départ et d'arrivée, et des éléments input de type "text", "number", "submit"
+		(vous n'utiliserez pas d'élément input de type "date" qui n'est pas supporté par tous les navigateurs )
+		<br><strong>Attention:</strong> ne pas oublier les attributs "id" et "for" pour relier "label" et "input" </li>
+	<li>les labels qui sont suivis d'une " * " correspondent à des champs qui devront être rendus obligatoires</li>
+	<li>les aéroports de départ seront proposés ainsi:
+	<ul>
+	 <li>Biarritz BIQ</li>
+	 <li>Brest (Bretagne) BES</li>
+	 <li>Grenoble GNB</li>
+	 <li>Lyon LYS</li>
+	 <li>Nice NCE</li>
+	</ul>
+	</li>
+	<li>les aéroports d'arrivée seront proposés ainsi:
+	<ul>
+	 <li>Ajaccio (Corse) AJA</li>
+	 <li>Brest (Bretagne) BES</li>
+	 <li>Bordeaux BOD</li>
+	 <li>Nantes NTE</li>
+	 <li>Toulouse TLS</li>
+	</ul>
+	</li>
+	<li>pour le symbole " <strong>&le;</strong> " vous utiliserez directement son encodage UTF-8: voir le site <a href="https://www.w3schools.com/charsets/ref_utf_math.asp" alt="math operators" target="_blank">https://www.w3schools.com/charsets/ref_utf_math.asp </a> </li>
+	<li>et pour le reste, faites en sorte que cela ressemble à ce qui est demandé!</li>
+</ul>
+
+<h3>Etape 2: Réalisation de la page complète (vol.html et styleVol.css)</h3>
+
+<p>Réaliser maintenant la page avec l'image de l'avion "avion-970-513.jpg".<br>
+Vous réutiliserez bien évidemment ce que vous avez fait avant.<br>
+Pour la transparence, vous utiliserez une opacité d'une valeur < 1</p>
+<hr/>
+
+</body>
+</html>

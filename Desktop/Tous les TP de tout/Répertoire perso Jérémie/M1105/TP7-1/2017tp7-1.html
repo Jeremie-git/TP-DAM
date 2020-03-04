@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<title> M1105 - TP n°7 - 1ère partie </title>
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="styleprint.css" media="print" />
+	</head>
+
+<body>
+<header>Université de Grenoble-Alpes - IUT2 - Département informatique<br />
+M1105 - Web</header>
+
+<h1>TP 7 - 1ère Partie (2H) <br />
+Introducion au "Responsive Web Design (RWD)" </h1>
+
+<hr />
+
+<h2>Objectifs du TP</h2>
+
+<ul>
+
+  <li>Comprendre les bases du "Responsive Web Design (RWD)" (web adaptatif)</li>
+</ul>
+
+<p>Ce document est consultable sur la plateforme Chamilo du département.
+</p>
+
+<hr />
+<h2>Préparation</h2>
+<ol>
+    <li>Créer un répertoire <kbd>TP7-1</kbd> dans votre répertoire <kbd>M1105</kbd></li>
+    <li>Se positionner dans ce répertoire <kbd>TP7-1</kbd> </li>
+   <li>Recopier dans votre répertoire <kbd>TP7-1</kbd> le contenu du répertoire <kbd>/users/info/pub/1a/M1105/tp7-1</kbd></li>
+</ol>
+
+
+<h2>Introduction</h2>
+<h3>Un site web adaptatif</h3>
+<p>Vous avez vu au TP5 qu'il y avait plusieurs façons de mettre en oeuvre un design. Vous avez expériementé le design <strong>fluide</strong> (ou encore liquide) et le design <strong>statique</strong>. <br /> Nous allons voir aujourd'hui le design <strong>adaptatif (responsive en anglais)</strong>. </p>
+
+<p>En effet, savoir concevoir un site web qui s'adapte aux différents terminaux de consultation que sont les smartphones, les tablettes, les écrans d'ordinateurs… est important de nos jours. Le <strong>Responsive Web Design (RWD)</strong> regroupe différents principes et technologies pour la conception et la réalisation d'un seul site web qui va prendre différentes "formes" selon le terminal de consultation.</p>
+<p>En cours, vous avez vu que les notions de résolution native (physique), résolution virtuelle et de viewport sont importantes à comprendre. </p>
+
+<h3>Exercice</h3>
+<p>Supposons une page web "standard" qui comporte juste une image de 320px de largeur x 269px de hauteur.</p>
+<p><img src="image320.jpg" width="160" height="134" alt="image fille" title="image fille" /></p>
+
+<p>Supposons qu'on utilise un smartphone dont les caractéristiques sont les suivantes:</p>
+<ul>
+<li>résolution physique de 640x960</li>
+<li>résolution virtuelle de 320x480</li>
+<li>viewport par défaut de 980</li>
+</ul>
+
+<p>Voici 3 affichages de la même page web qui contient tout simplement l'image précédente.</p>
+
+<p><img src="3images.png" width="643" height="334" alt="images smartphone" title="images smartphone" /></p>
+
+<ol>
+<li>Si on affiche la page telle quelle, <br />que voit-on  : affichage A ? affichage B ? affichage C ? </li>
+<li>Si on ajoute dans le code de la page <strong>&lt;meta name="viewport" content="initial-scale=1, width=device-width" /&gt;</strong>, <br />que voit-on : affichage A ? affichage B ? affichage C ?   </li>
+<li>Si on ajoute dans le code de la page <strong>&lt;meta name="viewport" content="initial-scale=2, width=device-width" /&gt;</strong>, <br />que voit-on : affichage A ? affichage B ? affichage C ?   </li>
+</ol>
+
+
+<h2>Adaptation d'une page existante: <strong>musique.html</strong></h2>
+
+<p>Vous allez adapter une page qui a été conçue pour un terminal d'ordinateur, donc une fenêtre de navigateur assez grande.
+Vous allez adopter la méthodologie n°1 vue en cours qui consiste à faire de la dégradation progressive pour adapter cette page à des supports plus petits. </p>
+
+<ul>
+	<li>Ouvrir la page <strong>musique.html</strong> avec firefox.
+	Regarder le rendu de cette page en faisant varier la largeur de la fenêtre du navigateur
+	Que constatez-vous?</li>
+	<li>Regarder aussi le rendu de cette page pour différentes simulations de terminaux en
+		utlisant les vues adaptatives accessibles depuis l'outil de développement web.</li>
+		<li>Lire et étudier attentivement le code HTML5 et le code CSS3, sinon il vous sera impossible de répondre
+		aux questions suivantes. En particulier, chercher à comprendre quel type de positionnement est utilisé.
+		</li>
+</ul>
+
+
+<p><strong>Travail à faire:</strong> On vous demande de modifier cette page (ajouter une balise meta dans le code HTML,
+	et ajouter des règles de style "media queries" dans le code CSS) afin d'obtenir les différents affichages ci-dessous,
+	sachant que 2 points de rupture ont été identifiés, à 768px et à 510px : </p>
+
+<h4>Rupture n°1: à 768px</h4>
+
+<p class="image centre"><img class="image" src="rupture768.png" alt="page tablette" title="page tablette" /></p>
+
+<h4>Rupture n°2: à 510px</h4>
+
+<p class="image centre"><img class="image" src="rupture510.png" alt="page smartphone" title="page smartphone" /></p>
+
+
+<p> Si vous avez un smartphone et/ou une tablette, vous pouvez bien sûr tester votre page et vérifier que votre "responsive web design" est bien pris en compte. Pour cela copier vos fichiers dans votre répertoire public_html (ne pas oublier la commande setup-public-html). </p>
+
+
+
+<h2>Travail Personnel</h2>
+<ul>
+  <li>Terminer tous les TPs précédents (examen machine de 2H à venir!)
+  </li>
+</ul>
+    </body>
+</html>

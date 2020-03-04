@@ -1,0 +1,15 @@
+
+.score {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin: 0% 25%;
+}
+
+.score h1{
+  text-align: center;
+}
+ #formulaire {
+   padding-left: 15%;
+   padding-right: 15%;
+ }

@@ -1,0 +1,81 @@
+body{
+	font-family:Times,sans-serif;
+	width:33%;
+	margin:auto;
+	}
+
+.entete{
+		display: grid;
+		grid-template-columns: 40% 50%;
+}
+
+p {
+	margin-bottom: 0px;
+}
+
+.labetinp {
+	display: inline-flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.labels {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.inputs input{
+	width: 100%;
+}
+
+.inputs {
+	width : 100%;
+}
+
+.boutons {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.vousetes {
+	display: flex;
+	justify-content: space-between;
+}
+ .box {
+	 width: 33%;
+ }
+
+ textarea {
+	 width: 100%;
+ }
+
+section
+{
+	background: #42B7DC;
+	padding: 30px;
+	border-radius: 5px;
+}
+
+fieldset
+{
+	margin-bottom: 10px;
+}
+
+
+fieldset+p{
+	display: flex;
+	justify-content: space-between;
+}
+
+input[type=submit]
+{
+    cursor: pointer;
+}
+
+input[type=reset]
+{
+    cursor: pointer;
+}

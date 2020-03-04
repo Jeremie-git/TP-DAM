@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Formulaire 2</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="form2.css" media="screen"/>
+</head>
+
+<body>
+  <section>
+  <h1>Un formulaire plus complet</h1>
+  <form method="get" action="script2.php">
+    <fieldset id="txt">
+      <legend>Champs texte</legend>
+      <label for="texte1">Texte 1:</label>
+      <input type="text" name="T1" id="texte1" required /><br/>
+
+      <label for="texte2">Texte 2:</label>
+      <input type="text" name="T2" id="texte2" /><br />
+
+      <label for="pass">Mot de passe:</label>
+      <input type="password" name="PWD" id="pass" /><br />
+
+      <label for="admail">E-mail:</label>
+      <input type="email" name="EM" id="admail" placeholder="votre adresse mail"/><br /><br />
+
+      <label for="textem">Texte multilignes:</label><br />
+      <textarea id="textem" name="Mltt" placeholder="Ajouter vos commentaires" rows="10"></textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend>Cases à cocher (plusieurs choix)</legend> <!-- Titre du fieldset -->
+      <input type="checkbox" name="C1" id="case1" /> <label for="case1">case n°1</label><br />
+      <input type="checkbox" name="C2" id="case2" /> <label for="case2">case n°2</label><br />
+      <input type="checkbox" name="C3" id="case3" /> <label for="case3">case n°3</label><br />
+      <input type="checkbox" name="C4" id="case4" /> <label for="case4">case n°4</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Boutons radio (1 seul choix)</legend> <!-- Titre du fieldset -->
+      <input type="radio" name="OPT" value="première" id="option1" />
+      <label for="option1">option n°1</label><br />
+      <input type="radio" name="OPT" value="seconde" id="option2" />
+      <label for="option2">option n°2</label><br />
+      <input type="radio" name="OPT" value="troisième" id="option3" checked/>
+      <label for="option3">option n°3</label><br />
+      <input type="radio" name="OPT" value="quatrième" id="option4" />
+      <label for="option4">option n°4</label><br />
+    </fieldset>
+
+    <fieldset>
+      <legend>Liste déroulante</legend> <!-- Titre du fieldset -->
+      <select name="animal">
+        <optgroup label="Chien">
+          <option value="boxer">Boxer</option>
+          <option value="berger">Berger allemand</option>
+          <option value="labrador">Labrador</option>
+        </optgroup>
+        <optgroup label="Chat">
+          <option value="persan" selected>Persan</option>
+          <option value="siamois">Siamois</option>
+        </optgroup>
+      </select>
+    </fieldset>
+    <p>
+      <input type="submit" value="Envoyez">
+      <input type="reset" value="Initialisez">
+    </p>
+  </form>
+</section>
+</body>
+</html>

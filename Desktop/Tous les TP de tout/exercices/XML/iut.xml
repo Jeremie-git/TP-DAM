@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="iso-8859-1"standalone="yes"?>
+<iut>
+
+  <etudiant id="123" nom="Lemaire">
+    <uv>
+      <nom>Programmation PHP 5</nom>
+      <durée>4 semaines</durée>
+      <note>14</note>
+    </uv>
+    <uv>
+      <nom>MySQL</nom>
+      <durée>6 semaines</durée>
+      <note>16</note>
+    <uv>
+  </étudiant>
+
+  <étudiant id="345" nom="Legros">
+    <uv>
+      <nom>Programmation PHP 5</nom>
+      <durée>4 semaines</durée>
+      <note>12</note>
+    </uv>
+    <uv>
+      <nom>SQLite</nom>
+      <durée>6 semaines</durée>
+      <note>16</note>
+    </uv>
+  </etudiant>
+
+  <etudiant id="456" nom="Legrand">
+    <uv>
+      <nom>Programmation PHP 5</nom>
+      <durée>5 semaines</durée>
+      <note>14</note>
+    </uv>
+    <uv>
+      <nom>SQLite</nom>
+      <durée>3 semaines</durée>
+      <note>15</note>
+    </uv>
+  </etudiant>
+
+  <etudiant id="567" nom="Lebeau">
+    <uv>
+      <nom>Programmation PHP 5</nom>
+      <durée>5 semaines</durée>
+      <note>17</note>
+    </uv>
+    <uv>
+      <nom>MySQL</nom>
+      <durée>6 semaines</durée>
+      <note>13</note>
+    </uv>
+  </etudiant>
+</iut>
+
+
+
+
+
+
+
+</iut>

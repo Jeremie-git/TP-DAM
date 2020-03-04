@@ -1,0 +1,56 @@
+body {
+  font-family: arial;
+  margin: 15px 15px 15px 15px
+
+}
+.titre {
+  color: rgba(1, 1, 127, 1)
+}
+
+.stage {
+  list-style: upper-roman;
+}
+
+.ital {
+  font-style: italic;
+}
+
+/* visited link */
+a:visited {
+  color: rgba(32, 96, 37, 1);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgba(11, 11, 254, 1);
+  background-color: rgba(235, 194, 225, 1);
+}
+
+.tablang, .tabsport {
+  border-collapse: collapse;
+}
+.tablang th,td {
+  padding: 10px 10px 10px 10px;
+  border: 2px solid blue;
+}
+.tablang tr:first-of-type th, .tablang tr th:first-of-type {
+ background-color: rgba(161, 193, 232, 1);
+}
+.tablang {
+   background-color : white;
+ }
+.tabsport th,td {
+  padding: 5px 5px 5px 5px;
+  border: 1px solid red;
+}
+.tabsport tr:first-of-type th,td, .tabsport tr th:first-of-type{
+  background-color: rgba(223, 217, 129, 1);
+}
+
+h1,h2 {
+  font-variant: small-caps;
+}
+footer {
+  text-align: right;
+  font-style: italic;
+}

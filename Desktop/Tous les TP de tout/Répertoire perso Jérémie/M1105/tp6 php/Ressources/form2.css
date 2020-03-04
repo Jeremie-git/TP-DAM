@@ -1,0 +1,53 @@
+body{
+	font-family:Geneva,sans-serif;
+	width:70%;
+	margin:auto;
+	}
+
+h1
+{
+	text-align:center;
+}
+
+section
+{
+	background: #42B7DC;
+	padding: 30px;
+	border-radius: 5px;
+}
+
+fieldset
+{
+	margin-bottom: 10px;
+}
+
+fieldset#txt label
+{
+	display:inline-block;
+	width:150px;
+}
+
+fieldset#txt input
+{
+	width:150px;
+	border-radius:5px;
+}
+
+fieldset#txt textarea{
+	width:100%;}
+
+
+fieldset+p{
+	display: flex;
+	justify-content: space-between;
+}
+
+input[type=submit]
+{
+    cursor: pointer;
+}
+
+input[type=reset]
+{
+    cursor: crosshair;
+}

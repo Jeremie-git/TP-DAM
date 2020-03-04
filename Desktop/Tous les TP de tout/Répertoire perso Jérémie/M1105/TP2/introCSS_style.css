@@ -1,0 +1,109 @@
+table, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.nimportequoi{
+  border: 1px solid yellow;
+  text-align: center;
+}
+.nimportequoi td{
+  border: 1px solid yellow;
+  padding: 5px 10px;
+}
+
+body {
+  font-family: arial; font-size: 18px; color: black;
+  background-image: url('img/plaine.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin:  50px 50px 50px 50px;
+}
+.nimportequoi tr:first-of-type td {
+  color: white;
+  padding: 0px 10px;  
+}
+
+.footer {
+  font-style: italic;
+}
+
+.section {
+  vertical-align: top;
+  text-align: justify;
+}
+.t2 {
+  font-size: 22px;
+  vertical-align: top;
+}
+.t3 {
+  font-size: 20px;
+}
+
+.header {
+  padding: 10px 10px 10px 10px;
+  background-color: #ff564d;
+}
+.soul {
+  font-size: 32px;
+  font-weight: bolder;
+  font-variant: small-caps;
+}
+
+.aside {
+  vertical-align: top;
+  padding: 20px 10px 10px 10px;
+  background-color: #ff56b1;
+  width:15%;
+}
+.aside:first-of-type{
+  background-color: #ffd834;
+}
+.aside:last-of-type{
+  width:20%;
+}
+
+.section {
+  padding: 5px 10px 10px 10px;
+  background-color: #00befc;
+  width: 30%;
+}
+
+.footer {
+  padding: 10px 10px 10px 10px;
+  background-color: #8df493;
+}
+
+.taab {
+  list-style-type: upper-roman;
+}
+
+.tab {
+  list-style-type: none;
+}
+.entete {
+  background-color: rgba(0, 112, 50, 1);
+}
+
+a:link {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(41, 180, 255, 1);
+}
+/* visited link */
+a:visited {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(219, 104, 223, 1);
+}
+/* mouse over link */
+a:hover {
+  color: rgba(11, 11, 254, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+/* selected link */
+a:active {
+  color: rgba(0, 184, 15, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+.fleur{
+  opacity: 0.7;
+}

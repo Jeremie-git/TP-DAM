@@ -1,0 +1,56 @@
+body
+{
+  color: black;
+  font-family: arial, helvetica, sans-serif;
+  font-size:normal;
+  width:90%;
+  margin: auto;
+  }
+
+body { counter-reset:titre2 titre3; }
+
+h2{ counter-increment:titre2; counter-reset: titre3; }
+h3{ counter-increment:titre3; }
+
+h2::before{ content: counter(titre2)" - "; }
+h3::before{ content: counter(titre2)"."counter(titre3)" - ";
+}
+
+h1{
+  font-variant: small-caps;
+  color: blue;text-align:center;
+}
+
+
+h2, h3, h4 { color: blue; }
+
+em { color: green; }
+
+pre
+{
+  border: solid thin #000;
+  background-color: #eee;
+  }
+
+kbd{
+  font-family: "arial narrow", sans-serif;
+  color: red;
+  }
+
+.image{
+  width:70%;
+}
+
+.centre{
+  text-align:center;
+}
+
+.demo img
+{
+  width:70%;
+}
+
+.demo2 img
+{
+  width:40%;
+}

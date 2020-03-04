@@ -1,0 +1,68 @@
+	#calc
+	{
+		width:50%;
+		height:400px;
+		border:2px solid blue;
+		margin:auto; /*centre la calculatrice dans la page */
+		padding:15px;
+		background-color: lightblue;
+	}
+
+	#titre
+	{
+		font-weight: bold;
+	}
+
+
+	#ligne_affichage
+	{
+		margin-top:10px;
+
+	}
+
+	#zone_affichage
+	{
+		font-size:30px;
+		text-align:right;
+		width:98.5%;
+		background-color: lightgreen;
+		font-family: Cursive;
+		height:40px;
+
+	}
+
+	.ligne_boutons
+	{
+		margin-top:5px;
+		margin-bottom:5px;
+		height:12%;
+	}
+
+	input /* pour mettre les boutons cote a cote*/
+	{
+		display:inline-block;
+	}
+
+	.bouton_classique /* boutons non editable */
+	{
+		width:15%;
+		font-size:28px;
+		padding:0px;
+		margin:auto;
+		background-color: lightgrey;
+		height: 100%;
+	}
+
+	.bouton_libre /* boutons editables */
+	{
+		width:37.5%;
+		font-size:28px;
+		padding:0px;
+		margin:auto;
+		background-color: lightgrey;
+		height:100%;
+	}
+
+.constantes{
+	color:black;
+}

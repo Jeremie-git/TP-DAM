@@ -1,0 +1,105 @@
+/* Feuille de style pour musique.html */
+
+body{
+  background-color: #343752; /* mauve */
+  color: white;
+  font-family: Arial, sans-serif;
+  width:90%;
+  margin: auto;
+  }
+
+h1{
+    font-variant:small-caps;
+  	text-align:center;
+    font-weight: normal;
+    color: #E16A72; /* rose */
+  }
+
+ul {
+    padding:0;
+    display: flex;
+  	flex-flow : row wrap;
+  	justify-content: center; /*alignement centre dans l’axe de lecture principal*/
+  }
+
+ul li{
+  	list-style-type:none;
+  }
+
+ul li a{
+  	text-decoration:none;
+    background-color: #E16A72;
+    color: white;
+  	border: 1px solid white;
+    margin-left: -1px; /* pour enlever la double bordure*/
+  	padding:0.5em;
+  	display: inline-block;
+  }
+
+ul li a:hover{
+  	color: #E16A72;
+    background-color: white;
+  }
+
+div.musique {
+    display: flex;
+    border: 1px solid white;
+    margin: 0.2em 0;
+  }
+
+div.extrait{
+  padding: 1em;
+  border-right: 1px solid white;
+  text-align: center;
+  }
+
+
+div.info{
+  padding: 1em;
+}
+
+h2{
+  font-weight: normal;
+  color: #E16A72;
+}
+
+/* styles pour des largeurs de fenêtre de navigateur "moyennes*/
+@media screen and (max-width:768px) {
+
+div.musique{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2{
+  text-align: center;
+}
+div.info p{
+  text-align: center;
+}
+}
+
+/* styles pour des largeurs de fenêtre de navigateur "petites*/
+@media screen and (max-width:510px) {
+h3{
+  display: block;
+}
+
+ul {
+      padding:0;
+      display: flex;
+    	flex-direction: column;
+      width: 45%;
+    }
+
+li a {
+  width: 100%;
+}
+}

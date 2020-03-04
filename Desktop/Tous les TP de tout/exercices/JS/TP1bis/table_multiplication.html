@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>table.html</title>
+    <link rel="stylesheet" href="table_multiplication.css">
+  </head>
+  <body>
+      <h2>1. On propose maintenant d'afficher les résultats de nos calculs dans la page web (donc en HTML). On se contentera dans un premier temps d'utiliser la méthode write de l'objet document. Il suffit donc de construire une chaîne de caractères S correspondant à un codeHTML (valide de préférence), puis ensuite de faire l'appel à document.write(S). Un exemple simple déjà traité en PHP, consiste à construire la table de multiplication entre 1 et 9 (donc de 9 lignes et 9colonnes). Créez cette table en regroupant tout (html, js, css) dans le fichier table.html. Ajoutez ensuite la possibilité pour l'utilisateur de préciser le nombre de lignes et de colonnes par une fenêtre de dialogue (prompt)</h2>
+
+      <h2>Résumez les différentes étapes d'exécution du programme JavaScript précédent (table de multiplication) en partant de la saisie de l'url de table.html dans le navigateur. Rédigez un petit texte en décrivant à chaque étape les opérations effectuées, les programmes impliqués dans ces opérations et les éventuels protocoles utilisés pour les communications. Demandez à votre enseignant de relire votre texte.</h2>
+
+      <p>Au chargement de la page le script va stocker la valeur "0" dans la variable "valeur" et "0" dans la variable "lignes". <br>
+        Une boite de dialogue apparait pour que l'utilisateur choissise sa table de multiplication. Son choix sera la nouvelle valeur de la variable "valeur". <br>
+        Une seconde boite de dialogue demande maintenant, à l'utilisateur, combien de lignes de cette table de multiplication on veut afficher. Cette saisie sera la nouvelle valeur de la variable "lignes". <br>
+        Le script va maintenant créer une table au plus bas de la div "body" via la commande "document.write". Puis va afficher le nombre de lignes stockées dans la variable "lignes".
+        Et finalement, ce script va afficher la multiplication de la valeur saisie dans la 1ere boite de dialogue (stockée dans la variable "valeur") par le numéro de chaque ligne dans la dernière case de sa ligne respective.
+      </p>
+
+
+
+
+
+  </body>
+  <script type="text/javascript" src="table_multiplication.js">
+
+  </script>
+</html>

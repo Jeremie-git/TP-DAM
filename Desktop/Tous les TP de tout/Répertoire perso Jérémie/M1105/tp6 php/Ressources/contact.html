@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="formcontact.css" media="screen"/>
+    <title>Contacts</title>
+  </head>
+
+  <body>
+  <section>
+    <div class="entete">
+      <div class="img">
+        <img src="logo.png" alt="logo" height="68px">
+      </div>
+      <div class="titreh1">
+        <h1>Formulaire de contact</h1>
+      </div>
+
+    </div>
+
+    <form class="formulaire" action="script2.php" method="get">
+      <fieldset id="coordonnees">
+          <legend>Vos coordonnées</legend>
+        <div class="labetinp">
+        <div class="labels">
+          <label for="nom" class="label">Nom</label>
+          <label for="prenom" class="label">Prénom</label>
+          <label for="mail" class="label">email</label>
+        </div>
+        <div class="inputs">
+          <input type="text" name="T1" id="nom" placeholder="Votre nom" required /><br/>
+          <input type="text" name="T1" id="prenom" placeholder="Votre prénom" required /><br/>
+          <input type="email" name="T1" id="mail" placeholder="Votre e-mail" required /><br/>
+        </div>
+        </div>
+
+        <p>Vous êtes...</p>
+        <div class="vousetes">
+          <div class="box">
+          <input type="radio" name="OPT" value="première" id="etudiant" />
+          <label for="etudiant">étudiant à l'iut2</label>
+          </div>
+          <div class="box">
+          <input type="radio" name="OPT" value="seconde" id="enseignant" />
+          <label for="enseignant">enseignant à l'iut2</label>
+          </div>
+          <div class="box">
+          <input type="radio" name="OPT" value="troisième" id="autre" checked/>
+          <label for="autre">autre</label>
+          </div>
+        </div>
+
+      </fieldset>
+
+      <fieldset id="message">
+        <legend>Votre message</legend>
+        <textarea name="Mltt" placeholder="Ajouter votre message" rows="7"></textarea>
+      </fieldset>
+
+      <div class="lebas">
+        <input type="checkbox" name="C1" id="case1" />
+        <label for="case1">Je souhaite recevoir par mail les nouveaux bons plans</label><br />
+        <input type="checkbox" name="C2" id="case2" />
+        <label for="case2">Je souhaite recevoir de l'information des partenaires du site</label><br />
+      </div>
+
+      <div class="boutons">
+        <input type="reset" value="Initialisez">
+        <input type="submit" value="Envoyez">
+      </div>
+
+    </form>
+
+  </section>
+  </body>
+</html>

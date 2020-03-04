@@ -1,0 +1,45 @@
+<?php
+session_start();
+
+$_SESSION["prenom"] = "Jérémie";
+$_SESSION["nom"] = "Voyer";
+$_SESSION["age"] = 32;
+?>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>exo interface web</title>
+  </head>
+  <body action="exo.php" method="post">
+      <p>Tentative d'afficher des variables d'environnement</p>
+
+
+  <?php
+  function test() {
+      $foo = "variable locale";
+
+      echo '$foo dans le contexte global : ' . $GLOBALS["foo"] . "\n";
+      echo '$foo dans le contexte courant : ' . $foo . "\n";
+  }
+
+  $foo = "Exemple de contenu";
+  test();
+  ?>
+
+
+    <form class="" action="exo.php" method="post">
+      <input type="text" name="nom"  placeholder="Nom">
+      <input type="text" name="prenom"  placeholder="Prenom">
+      <input type="number" name="age"  placeholder="Age">
+
+    <button type="submit" value="Tester"></button>
+
+
+
+
+
+    </form>
+  </body>
+</html>
